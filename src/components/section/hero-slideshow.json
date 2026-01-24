@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_section_hero_slideshows",
+  "info": {
+    "displayName": "Hero Slideshow"
+  },
+  "options": {},
+  "attributes": {
+    "Slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "partial.slide"
+    }
+  }
+}

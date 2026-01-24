@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_section_text_with_medias",
+  "info": {
+    "displayName": "Text With Media"
+  },
+  "options": {},
+  "attributes": {
+    "media_text_items": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partial.media-text-item"
+    }
+  }
+}
