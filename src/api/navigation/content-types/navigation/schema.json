@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "navigations",
+  "info": {
+    "singularName": "navigation",
+    "pluralName": "navigations",
+    "displayName": "001. Navigation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "main_navigations": {
+      "type": "component",
+      "component": "partial.menu-item",
+      "repeatable": true
+    },
+    "social_media_links": {
+      "type": "component",
+      "component": "partial.icon-with-link",
+      "repeatable": true
+    }
+  }
+}

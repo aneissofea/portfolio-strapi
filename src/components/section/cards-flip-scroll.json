@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_section_cards_flip_scrolls",
+  "info": {
+    "displayName": "Cards Flip Scroll"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "bg_text": {
+      "type": "string"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    }
+  },
+  "config": {}
+}

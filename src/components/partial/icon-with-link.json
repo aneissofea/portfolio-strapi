@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_partial_icon_with_links",
+  "info": {
+    "displayName": "Icon With Link"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

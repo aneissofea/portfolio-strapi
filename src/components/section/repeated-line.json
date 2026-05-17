@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_section_repeated_lines",
+  "info": {
+    "displayName": "04. Repeated Line"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "component": "partial.label",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

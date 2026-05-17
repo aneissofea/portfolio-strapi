@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_roles",
+  "info": {
+    "singularName": "project-role",
+    "pluralName": "project-roles",
+    "displayName": "Project Roles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "mappedBy": "roles"
+    }
+  }
+}

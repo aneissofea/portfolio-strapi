@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_section_contact_forms",
+  "info": {
+    "displayName": "05. Contact Form"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

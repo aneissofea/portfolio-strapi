@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Projects"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "summary": {
+      "type": "text"
+    },
+    "thumbnail_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "stacks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::stack.stack",
+      "inversedBy": "projects"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project-category.project-category",
+      "inversedBy": "projects"
+    },
+    "roles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-role.project-role",
+      "inversedBy": "projects"
+    },
+    "items": {
+      "type": "component",
+      "component": "partial.icon-and-texts",
+      "repeatable": true
+    },
+    "specialEffect": {
+      "type": "text"
+    },
+    "rarity_star": {
+      "type": "integer",
+      "max": 10
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

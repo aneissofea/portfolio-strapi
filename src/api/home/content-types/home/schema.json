@@ -1,26 +1,16 @@
 {
-  "kind": "collectionType",
-  "collectionName": "pages",
+  "kind": "singleType",
+  "collectionName": "homes",
   "info": {
-    "singularName": "page",
-    "pluralName": "pages",
-    "displayName": "Pages",
-    "description": ""
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "01. Home"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title",
-      "required": true
-    },
     "sections": {
       "type": "dynamiczone",
       "components": [

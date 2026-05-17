@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_section_cards",
+  "info": {
+    "displayName": "03. Cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "buttons": {
+      "type": "component",
+      "component": "partial.button",
+      "repeatable": true
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    },
+    "layout": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Scroll Sticky",
+      "enum": [
+        "Flat (Default)",
+        "Scroll Sticky",
+        "Segmented",
+        "Circular Rotation"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_partial_main_titles",
+  "info": {
+    "displayName": "Main Titles"
+  },
+  "options": {},
+  "attributes": {
+    "prefixTitle": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "partial.icon-with-label",
+      "repeatable": true
+    },
+    "suffixTitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_partial_labels",
+  "info": {
+    "displayName": "Label"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

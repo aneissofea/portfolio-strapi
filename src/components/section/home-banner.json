@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_section_home_banners",
+  "info": {
+    "displayName": "01. Home Banner"
+  },
+  "options": {},
+  "attributes": {
+    "coverTitle": {
+      "type": "string"
+    },
+    "titles": {
+      "type": "component",
+      "component": "partial.main-titles",
+      "repeatable": false
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "buttons": {
+      "type": "component",
+      "component": "partial.button",
+      "repeatable": true
+    },
+    "marquee": {
+      "type": "component",
+      "component": "partial.icon-with-label",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
