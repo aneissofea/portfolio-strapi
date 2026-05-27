@@ -9,6 +9,9 @@
       "type": "component",
       "component": "partial.label",
       "repeatable": true
+    },
+    "sectionId": {
+      "type": "string"
     }
   },
   "config": {}

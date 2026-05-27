@@ -7,6 +7,21 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "buttons": {
+      "type": "component",
+      "component": "partial.button",
+      "repeatable": true
+    },
+    "sectionId": {
+      "type": "string"
     }
   },
   "config": {}

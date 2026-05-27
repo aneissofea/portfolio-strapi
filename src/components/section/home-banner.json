@@ -29,6 +29,9 @@
       "type": "component",
       "component": "partial.icon-with-label",
       "repeatable": true
+    },
+    "sectionId": {
+      "type": "string"
     }
   },
   "config": {}

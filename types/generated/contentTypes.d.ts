@@ -457,8 +457,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'section.cards',
         'section.repeated-line',
         'section.contact-form',
-        'section.cards-flip-scroll',
-        'section.cards-flip-segmented',
+        'section.tabs',
       ]
     >;
     updatedAt: Schema.Attribute.DateTime;
@@ -527,8 +526,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'section.cards',
         'section.repeated-line',
         'section.contact-form',
-        'section.cards-flip-scroll',
-        'section.cards-flip-segmented',
+        'section.tabs',
       ]
     >;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;

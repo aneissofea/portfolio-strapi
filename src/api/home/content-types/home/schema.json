@@ -19,8 +19,7 @@
         "section.cards",
         "section.repeated-line",
         "section.contact-form",
-        "section.cards-flip-scroll",
-        "section.cards-flip-segmented"
+        "section.tabs"
       ]
     },
     "metaTitle": {

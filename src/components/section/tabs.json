@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_section_intros",
+  "collectionName": "components_section_tabs",
   "info": {
-    "displayName": "02. Intro"
+    "displayName": "06. Tabs"
   },
   "options": {},
   "attributes": {
@@ -18,6 +18,11 @@
     "buttons": {
       "type": "component",
       "component": "partial.button",
+      "repeatable": true
+    },
+    "items": {
+      "type": "component",
+      "component": "partial.tab",
       "repeatable": true
     },
     "sectionId": {

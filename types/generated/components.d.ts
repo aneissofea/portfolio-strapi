@@ -166,12 +166,34 @@ export interface PartialSubmenuItem extends Struct.ComponentSchema {
   };
 }
 
+export interface PartialTab extends Struct.ComponentSchema {
+  collectionName: 'components_partial_tabs';
+  info: {
+    displayName: 'Tab';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    layout: Schema.Attribute.Enumeration<
+      ['Flat (Default)', 'Scroll Sticky', 'Segmented', 'Circular Rotation']
+    >;
+    projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionCards extends Struct.ComponentSchema {
   collectionName: 'components_section_cards';
   info: {
     displayName: '03. Cards';
   };
   attributes: {
+    bgText: Schema.Attribute.String;
     buttons: Schema.Attribute.Component<'partial.button', true>;
     description: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
@@ -186,6 +208,7 @@ export interface SectionCards extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Scroll Sticky'>;
     projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
+    sectionId: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -240,6 +263,15 @@ export interface SectionContactForm extends Struct.ComponentSchema {
     displayName: '05. Contact Form';
   };
   attributes: {
+    buttons: Schema.Attribute.Component<'partial.button', true>;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    sectionId: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -270,6 +302,7 @@ export interface SectionHomeBanner extends Struct.ComponentSchema {
         }
       >;
     marquee: Schema.Attribute.Component<'partial.icon-with-label', true>;
+    sectionId: Schema.Attribute.String;
     titles: Schema.Attribute.Component<'partial.main-titles', false>;
   };
 }
@@ -288,6 +321,7 @@ export interface SectionIntro extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
+    sectionId: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -299,6 +333,27 @@ export interface SectionRepeatedLine extends Struct.ComponentSchema {
   };
   attributes: {
     items: Schema.Attribute.Component<'partial.label', true>;
+    sectionId: Schema.Attribute.String;
+  };
+}
+
+export interface SectionTabs extends Struct.ComponentSchema {
+  collectionName: 'components_section_tabs';
+  info: {
+    displayName: '06. Tabs';
+  };
+  attributes: {
+    buttons: Schema.Attribute.Component<'partial.button', true>;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    items: Schema.Attribute.Component<'partial.tab', true>;
+    sectionId: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -329,6 +384,7 @@ declare module '@strapi/strapi' {
       'partial.project-cards': PartialProjectCards;
       'partial.slide': PartialSlide;
       'partial.submenu-item': PartialSubmenuItem;
+      'partial.tab': PartialTab;
       'section.cards': SectionCards;
       'section.cards-flip-scroll': SectionCardsFlipScroll;
       'section.cards-flip-segmented': SectionCardsFlipSegmented;
@@ -337,6 +393,7 @@ declare module '@strapi/strapi' {
       'section.home-banner': SectionHomeBanner;
       'section.intro': SectionIntro;
       'section.repeated-line': SectionRepeatedLine;
+      'section.tabs': SectionTabs;
       'section.text-with-media': SectionTextWithMedia;
     }
   }

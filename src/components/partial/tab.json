@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_section_cards",
+  "collectionName": "components_partial_tabs",
   "info": {
-    "displayName": "03. Cards"
+    "displayName": "Tab"
   },
   "options": {},
   "attributes": {
@@ -15,23 +15,8 @@
         "preset": "defaultHtml"
       }
     },
-    "buttons": {
-      "type": "component",
-      "component": "partial.button",
-      "repeatable": true
-    },
-    "bgText": {
-      "type": "string"
-    },
-    "projects": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::project.project"
-    },
     "layout": {
       "type": "enumeration",
-      "required": true,
-      "default": "Scroll Sticky",
       "enum": [
         "Flat (Default)",
         "Scroll Sticky",
@@ -39,8 +24,10 @@
         "Circular Rotation"
       ]
     },
-    "sectionId": {
-      "type": "string"
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
     }
   },
   "config": {}
